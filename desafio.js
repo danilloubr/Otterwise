@@ -22,7 +22,7 @@ const users = [
   {
     nome: 'Ronaldinho Gaúcho',
     idade: 39,
-    cargo: 'Aposentado',
+    cargo: 'Ex Jogador',
   },
 ]
 
