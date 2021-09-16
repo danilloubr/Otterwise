@@ -7,8 +7,14 @@ Exemplo saída:
 
 const entrada = [12, 32, 54, 6, 8, 89, 64, 64, 6]
 
-const saida = entrada.sort((a, b) => a < b)
+const saida = entrada.sort((a, b) => {
+  return b - a
+})
+
 console.log(saida)
 
-const saida2 = entrada.sort((a, b) => a > b)
+const saida2 = entrada.sort((a, b) => {
+  return a - b
+})
+
 console.log(saida2)

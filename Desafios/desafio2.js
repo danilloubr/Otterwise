@@ -30,7 +30,7 @@ console.log(quantidadeCargos)
 /* Letra b)
 Imprima no console o array colaboradores ordenado por idade de forma decrescente.*/
 
-const imprime = colaboradores.sort((a, b) => a.idade < b.idade)
+const imprime = colaboradores.sort((a, b) => b.idade - a.idade)
 
 console.table(imprime)
 
@@ -55,6 +55,6 @@ Imprima no console o array de colaboradores ordenado por idade de forma
 crescente e, em caso de empate, o desempate deve ser feito por ordem de cargo: 
 Estagiário (1º), front-end (2º), back-end (3º), design (4º).*/
 
-const imprime2 = colaboradores.sort((a, b) => a.idade > b.idade)
+const imprime2 = colaboradores.sort((a, b) => a.idade - b.idade)
 
 console.table(imprime2)
