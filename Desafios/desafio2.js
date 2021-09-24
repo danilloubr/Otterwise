@@ -38,17 +38,17 @@ console.table(imprime)
 Imprima no console o array de colaboradores ordenado por cargo, sendo a ordem: 
 Estagiário (1º), front-end (2º), back-end (3º), design (4º).*/
 
-function mudancaArray(colaboradores, from, to) {
-  colaboradores.splice(to, 0, colaboradores.splice(from, 1)[0])
-  return colaboradores
-}
+// function mudancaArray(colaboradores, from, to) {
+//   colaboradores.splice(to, 0, colaboradores.splice(from, 1)[0])
+//   return colaboradores
+// }
 
-mudancaArray(colaboradores, 5, 0)
-mudancaArray(colaboradores, 2, 1)
-mudancaArray(colaboradores, 5, 2)
-mudancaArray(colaboradores, 3, 5)
+// mudancaArray(colaboradores, 5, 0)
+// mudancaArray(colaboradores, 2, 1)
+// mudancaArray(colaboradores, 5, 2)
+// mudancaArray(colaboradores, 3, 5)
 
-console.table(colaboradores)
+// console.table(colaboradores)
 
 /* Letra d)
 Imprima no console o array de colaboradores ordenado por idade de forma

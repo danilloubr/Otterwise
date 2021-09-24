@@ -1,0 +1,12 @@
+{
+  "name": "CNPJ",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "date-fns": "^2.24.0",
+    "node-console-input": "^1.1.1",
+    "node-fetch": "^3.0.0"
+  }
+}
