@@ -1,0 +1,42 @@
+* {
+    background-color: antiquewhite;
+}
+
+footer p {
+    font-weight: bolder;
+    font-size: 12px;
+}
+
+nav * {
+    margin: 20px;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    text-align: center;
+    background-color: darkcyan;
+    
+}
+
+form {
+    width: 380px;
+    padding: 20px;
+    background-color: darkgray;
+    }
+form input {
+margin: 15px;
+    }
+    form button {
+        width: 220px;
+        padding: 10px;
+        border: 0;
+        border-radius: 10px;
+        color: white;
+        background-color: darkcyan;
+
+    }
+
+h1 {
+    line-height: 18px;
+    font-size: 14px;
+    color: darkcyan;
+}
