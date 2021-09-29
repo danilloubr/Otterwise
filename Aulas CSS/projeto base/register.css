@@ -12,6 +12,7 @@ h2 {
   padding: 10px;
   text-align: center;
 }
+
 form {
   display: flex;
   flex-direction: column;
@@ -22,7 +23,5 @@ form button {
 }
 
 footer {
-  display: flex;
   text-align: center;
-  justify-content: center;
 }
