@@ -9,5 +9,5 @@ ID: 4 | NOME: FRANCISCO
 */
 
 //Consultar histórico do cliente:
-consultarCliente(2)
+consultarCliente(1)
 

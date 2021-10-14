@@ -6,7 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/Desafio CSS + HTML + JS/css/style.css" />
     <link rel="stylesheet" href="/Desafio CSS + HTML + JS/css/global.css" />
-    <script src="/Desafio CSS + HTML + JS/javascript/index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+
     <title>Vida Animal</title>
   </head>
   <body>
@@ -19,15 +29,23 @@
             id="logo-marca"
           />
         </div>
+        <i class="bi bi-list" id="botao-abrir"></i>
+        <i class="bi bi-x" id="botao-fechar"></i>
         <div id="menu">
+          <a href="#" id="galeria">GALERIA</a>
+          <a href="#" id="contato">CONTATO</a>
+          <a href="#" id="social">SOCIAL</a>
+        </div>
+        <div id="menu-responsivo">
           <a href="#" id="galeria">GALERIA</a>
           <a href="#" id="contato">CONTATO</a>
           <a href="#" id="social">SOCIAL</a>
         </div>
       </nav>
     </header>
-    <main>
-      <section class="banner-cachorro">
+
+    <section class="banner-cachorro">
+      <div class="banner">
         <div id="imagem">
           <img
             src="/Desafio CSS + HTML + JS/img/background.png"
@@ -35,36 +53,71 @@
           />
         </div>
         <div id="textos">
-          <h1>Adote um cachorrinho</h1>
+          <h1>Adote um pet</h1>
           <h2>Escolha seu melhor amigo.</h2>
         </div>
-      </section>
-      <section class="galeria">
-        <div id="gatos">
-          <img src="/Desafio CSS + HTML + JS/img/cat_1 1.png" alt="gato1" />
-          <img src="/Desafio CSS + HTML + JS/img/cat_2 1.png" alt="gato2" />
-          <img src="/Desafio CSS + HTML + JS/img/cat_3 1.png" alt="gato3" />
-        </div>
-        <div id="cachorros">
-          <img src="/Desafio CSS + HTML + JS/img/dog_1 1.png" alt="cachorro1" />
-          <img src="/Desafio CSS + HTML + JS/img/dog_2 1.png" alt="cachorro2" />
-          <img src="/Desafio CSS + HTML + JS/img/dog_3 1.png" alt="cachirro3" />
-        </div>
-      </section>
-      <section class="formulario">
-          <form action="" id="caixa">
-              <label for="nome">Nome:</label>
-              <input type="text" name="nome" id="nome" placeholder="Insira seu nome">
-              <label for="email">Email:</label>
-              <input type="email" name="email" id="email" placeholder=
-              'Insira seu melhor email'>
-              <label for="telefone">Telefone:</label>
-              <input type="tel" name="telefone" id="telefone" placeholder="(55) 5555-5555">
-              <label for="mensagem">Mensagem:</label>
-              <input type="text" name="mensagem" id="mensagem" placeholder="Deixa aqui sua mesagem">
-              <button type="submit">ENVIAR</button>
-          </form>
-      </section>
+      </div>
+    </section>
+    <main class="galeria">
+      <div id="pets">
+        <img src="/Desafio CSS + HTML + JS/img/cat_1 1.png" alt="gato1" />
+        <img src="/Desafio CSS + HTML + JS/img/cat_2 1.png" alt="gato2" />
+        <img src="/Desafio CSS + HTML + JS/img/cat_3 1.png" alt="gato3" />
+
+        <img src="/Desafio CSS + HTML + JS/img/dog_1 1.png" alt="cachorro1" />
+        <img src="/Desafio CSS + HTML + JS/img/dog_2 1.png" alt="cachorro2" />
+        <img src="/Desafio CSS + HTML + JS/img/dog_3 1.png" alt="cachirro3" />
+      </div>
     </main>
+    <section class="formulario">
+      <form method="post" id="caixa">
+        <label for="nome">Nome:</label>
+        <input
+          type="text"
+          name="nome"
+          id="nome"
+          placeholder="Insira seu nome"
+          required
+          
+        />
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Insira seu melhor email"
+          required
+          
+        />
+        <label for="telefone">Telefone:</label>
+        <input
+          type="number"
+          name="telefone"
+          id="telefone"
+          placeholder="(55) 55555-5555"
+          maxlength = "11"
+          min="1" max="11"
+          required
+          
+        />
+        <label for="mensagem">Mensagem:</label>
+        <textarea
+          name="mensagem"
+          id="mensagem"
+          cols="10"
+          rows="3"
+          placeholder="Deixa aqui sua mesagem"
+          required
+          
+        ></textarea>
+        <button type="submit">ENVIAR</button>
+      
+        <div id="resultado"> </div>
+      </form>
+    </section>
+    <footer>
+      <p>Direitos Reservados - 2021</p>
+    </footer>
   </body>
+  <script src="/Desafio CSS + HTML + JS/javascript/index.js"></script>
 </html>

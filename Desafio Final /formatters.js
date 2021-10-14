@@ -65,7 +65,7 @@ const dados = comprasOrdenadas
   .map((elem) => {
     return `Compra em ${elem.data} no total de R$ ${elem.total}`;
   })
-  .join(" - ");
+  .join("\n");
 const dados2 = comprasOrdenadas2
   .map((elem) => {
     return `Compra em ${elem.data} no total de R$ ${elem.total}`;
@@ -114,7 +114,7 @@ export function consultarCliente(id) {
   const clientes = {
     1: `Cliente: ${filtrarCliente(1).id} - ${
       filtrarCliente(1).nome
-    }: ${dados} = Total do cliente: R$${totalCompras.toFixed(2)}`,
+    }:\n${dados} \nTotal do cliente: R$${totalCompras.toFixed(2)}`,
     2: `Cliente: ${filtrarCliente(2).id} - ${
       filtrarCliente(2).nome
     }: ${dados2} = Total do cliente: R$${totalCompras2.toFixed(2)}`,
