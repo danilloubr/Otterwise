@@ -1,11 +1,7 @@
-* {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-}
+
 
 #menu-responsivo {
-  width: 90%;
+  width: 100%;
   position: absolute;
   display: none;
   flex-direction: column;

@@ -1,0 +1,20 @@
+.main-container div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: tomato;
+}
+
+.main-container h2{
+    
+    color:cornflowerblue;
+    font-size: 50px;
+    margin: 50px;
+}
+
+.main-container p{
+    
+    color:midnightblue;
+    font-size: 20px;
+    margin: 20px;
+}

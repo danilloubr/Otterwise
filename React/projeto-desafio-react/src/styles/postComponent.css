@@ -1,0 +1,78 @@
+.div-principal {
+  display: flex;
+  flex-wrap: wrap;
+
+  align-content: center;
+  justify-content: space-around;
+
+  margin-top: 15px;
+  
+}
+
+.titulo-h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+  width: 100%;
+  text-align: center;
+  font-size: 50px;
+  
+}
+
+.card {
+  
+  padding: 20px;
+  margin: 20px;
+  /* background: linear-gradient(225deg, #000000, #0e2bb8, #048f44);
+    background-size: 600% 600%;
+
+    -webkit-animation: AnimationName 14s ease infinite;
+    -moz-animation: AnimationName 14s ease infinite;
+    animation: AnimationName 14s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 78%}
+    50%{background-position:100% 23%}
+    100%{background-position:0% 78%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 78%}
+    50%{background-position:100% 23%}
+    100%{background-position:0% 78%}
+}
+@keyframes AnimationName {
+    0%{background-position:0% 78%}
+    50%{background-position:100% 23%}
+    100%{background-position:0% 78%}
+    */
+} 
+    
+
+
+.botao {
+  text-align: center;
+}
+
+.card {
+  --angle: 0deg;
+  
+  border: 0.1vmin solid;
+  border-image: conic-gradient(from var(--angle), red, yellow, lime, aqua, blue, magenta, red) 1;
+  
+  animation: 10s rotate linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    --angle: 360deg;
+  }
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+

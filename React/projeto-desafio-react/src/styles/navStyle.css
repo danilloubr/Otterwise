@@ -1,0 +1,9 @@
+.div-nav {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 20px;
+    text-decoration: none;
+    
+}
