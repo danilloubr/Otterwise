@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Fragment } from "react";
 import { toast } from "react-toastify";
 
-// import { useParams } from "react-router";
-
 import { useHistory } from "react-router-dom";
 
 import { deleteTask, getTask } from "../services/postServices";
@@ -16,14 +14,11 @@ import Typography from "@mui/material/Typography";
 
 import "../styles/postComponent.css";
 
-
-
 import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
-
 
 function GetTask() {
   const [post, setPost] = useState();
@@ -34,8 +29,6 @@ function GetTask() {
   const handleNavigation = (id) => {
     history.push(`/edittasks/${id}`);
   };
-
-  
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -69,8 +62,8 @@ function GetTask() {
     try {
       const { data: resp } = await deleteTask(id);
       console.log("RESP", resp);
-      handleClose()
-      toast("Ei, nem gostava daquela tarefa também ;)") ;
+      handleClose();
+      toast("Ei, nem gostava daquela tarefa também ;)");
       setPost(resp);
     } catch (error) {
       console.log(error);
@@ -84,7 +77,6 @@ function GetTask() {
       <h1 className="titulo-h1">Desafio React - Lista de Tarefas</h1>
       <div className="botao">
         <Button variant="contained" onClick={handleForm} color="success">
-          {" "}
           Adicionar Nova Tarefa
         </Button>
       </div>
@@ -141,8 +133,8 @@ function GetTask() {
                 </DialogTitle>
                 <DialogContent>
                   <DialogContentText id="alert-dialog-slide-description">
-                    Espero que saiba o que está fazendo, depois de
-                    clicar em Deletar não terá mais volta.
+                    Espero que saiba o que está fazendo, depois de clicar em
+                    Deletar não terá mais volta.
                   </DialogContentText>
                 </DialogContent>
                 <DialogActions>
@@ -160,7 +152,6 @@ function GetTask() {
           );
         })}
       </div>
- 
     </div>
   );
 }

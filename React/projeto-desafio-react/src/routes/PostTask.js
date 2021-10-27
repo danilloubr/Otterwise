@@ -1,4 +1,3 @@
-// import React, { useState, useEffect } from "react";
 import { postTask } from "../services/postServices";
 import { TextField, Button } from "@mui/material";
 import { useHistory } from "react-router";
@@ -8,17 +7,9 @@ import { toast } from "react-toastify";
 import "../styles/postTask.css";
 
 import { useForm } from "react-hook-form";
-// import { useEffect } from "react";
 
 function PostTask() {
-  // const [post, setPost] = useState();
-
   const history = useHistory();
-
-  // const { id } = useParams()
-
-  // const [title, setTitle] = useState("");
-  // const [description, setDescription] = useState("");
 
   const { register, handleSubmit } = useForm();
 
@@ -36,30 +27,6 @@ function PostTask() {
 
     console.log("DATA AQUI:", data);
   };
-
-  // const onTitle = (e) => setTitle(e.target.value);
-  // const onDescription = (e) => setDescription(e.target.value);
-
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  // useEffect(() => {
-  //   async function fetchData() {
-
-  //     try {
-  //       const postsInfo = await postTask(data);
-
-  //       setPost(postsInfo);
-  //       console.log("POST INFO", postsInfo)
-  //       ;
-  //     } catch {
-  //       console.error("Deu erro macho.");
-  //     }
-  //   }
-
-  //   fetchData();
-  //  ;
-  // }, [data]);
-
-  // if (!data) return null;
 
   return (
     <div className="div-principal">
