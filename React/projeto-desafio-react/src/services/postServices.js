@@ -14,10 +14,7 @@ export const deleteTask = (id) => {
   return client.delete(`/${apiCode}/${id}`)
 };
 
-export const getPost = (id) => {
-  return client.get(`/posts/${id}`);
+export const editTask = (id, body) => {
+  return client.put(`/${apiCode}/${id}`, body)
 };
 
-export const getComments = (id) => {
-  return client.get(`/comments?postId=${id}`);
-};

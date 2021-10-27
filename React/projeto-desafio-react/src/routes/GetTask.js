@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Fragment } from "react";
-// import { useLocation } from "react-router-dom";
+
+// import { useParams } from "react-router";
+
 import { useHistory } from "react-router-dom";
 
-import { deleteTask, getTask } from "../services/postServices";
+import { deleteTask, getTask} from "../services/postServices";
 
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -17,7 +19,12 @@ function GetTask() {
   const [post, setPost] = useState();
 
   const history = useHistory();
-  // const location = useLocation();
+
+  const handleNavigation = (id) => {
+    history.push(`/edittasks/${id}`);
+  };
+
+  
 
   useEffect(() => {
     const fetchData = async () => {
@@ -39,17 +46,22 @@ function GetTask() {
     history.push("/posttasks");
   };
 
-  const handleNavigation = async (id) => {
+  const handleDelete = async (id) => {
     try {
       const { data: resp } = await deleteTask(id);
       console.log("RESP", resp);
       alert("Post deletado com sucesso!!!");
+      setPost(resp);
     } catch (error) {
       console.log(error);
       alert("Post não foi deletado!!!");
     }
-    history.push(`/gettasks`);
   };
+  console.log("POST AQUI", post);
+
+  
+
+  
 
   return (
     <div>
@@ -82,13 +94,20 @@ function GetTask() {
                     color="error"
                     size="small"
                     onClick={() => {
-                      handleNavigation(id);
+                      handleDelete(id);
                     }}
                     type="submit"
                   >
                     Deletar
                   </Button>
-                  <Button size="small">Editar</Button>
+                  <Button
+                    size="small"
+                    onClick={() => {
+                      handleNavigation(id);
+                    }}
+                  >
+                    Editar
+                  </Button>
                 </CardActions>
               </Card>
             </Fragment>

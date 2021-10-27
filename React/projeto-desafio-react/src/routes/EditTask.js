@@ -1,16 +1,18 @@
 // import React, { useState, useEffect } from "react";
-import { postTask } from "../services/postServices";
+import { editTask } from "../services/postServices";
 import { TextField, Button } from "@mui/material";
-import { useHistory} from "react-router";
+import { useHistory, useParams} from "react-router";
 
 import "../styles/postComponent.css";
 import { useForm } from "react-hook-form";
 // import { useEffect } from "react";
 
-function PostTask() {
+function EditTask() {
   // const [post, setPost] = useState();
 
   const history = useHistory()
+
+  const {id} = useParams()
 
   // const { id } = useParams()
 
@@ -20,17 +22,17 @@ function PostTask() {
  const { register, handleSubmit} = useForm()
 
  
- const onSubmit = async data => {
+ const handleEdit = async data => {
 
 try {
      console.log(data)
-     const {data: resp} = await postTask(data)
+     const {data: resp} = await editTask(id, data)
      console.log(resp)
-     alert("Post criado com sucesso!!!")
-     history.push("./gettasks")
+     alert("Post editado com sucesso!!!")
+     history.push("/gettasks")
    } catch (error) {
      console.error(error)
-     alert("Post não foi criado!!!")
+     alert("Post não editado !!!")
      
    }
    
@@ -69,20 +71,24 @@ try {
 
   ;
 
+  const goHome = () => {
+    history.push("/gettasks")
+  }
+
   return (
     <div>
-      <h1 className="titulo-h1">Desafio Final de React - Postando Tarefa</h1>
+      <h1 className="titulo-h1">Desafio Final de React - Editando Tarefa</h1>
       <div className="div-principal">
         <div className="div-conteiner-login">
-          <h1>Adicionar Nova Tarefa</h1>
-          <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
+          <h1>Editar tarefa:</h1>
+          <form className="login-form" onSubmit={handleSubmit(handleEdit)}>
             <TextField
               
               {...register("title")}
               label="Título"
               variant="outlined"
               type="text"
-              required
+              
             />
             <TextField
               
@@ -90,11 +96,14 @@ try {
               label="Descrição"
               variant="outlined"
               type="text"
-              required
+              
             />
 
             <Button type="submit" variant="contained" color="success">
-              Adicionar
+              Editar
+            </Button>
+            <Button type="submit" variant="contained" color="error" onClick={() => goHome()}>
+              Cancelar
             </Button>
           </form>
         </div>
@@ -103,4 +112,4 @@ try {
   );
 }
 
-export default PostTask;
+export default EditTask;

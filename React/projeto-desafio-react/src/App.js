@@ -6,7 +6,8 @@ import GetTask from "./routes/GetTask";
 
 import Header from "./components/Header";
 import PostTask from "./routes/PostTask";
-import DeleteTask from "./routes/DeleteTask";
+import EditTask from "./routes/EditTask";
+
 
 function App() {
   return (
@@ -16,15 +17,16 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/gettasks">
+        <Route path="/gettasks/">
           <GetTask />
         </Route>
-        <Route exact path="/posttasks">
+        <Route path="/posttasks/">
           <PostTask />
         </Route>
-        <Route exact path="/deletetask/:id">
-          <DeleteTask />
+        <Route path="/edittasks/:id">
+          <EditTask />
         </Route>
+        
       </Switch>
     </Router>
   );
