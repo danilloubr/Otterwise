@@ -1,7 +1,8 @@
 // import React, { useState, useEffect } from "react";
-import { editTask } from "../services/postServices";
+import { editTask, getTaskId } from "../services/postServices";
 import { TextField, Button } from "@mui/material";
 import { useHistory, useParams } from "react-router";
+import { useEffect, useState } from "react";
 
 import { toast } from "react-toastify";
 
@@ -9,6 +10,7 @@ import "../styles/editTask.css";
 import { useForm } from "react-hook-form";
 
 function EditTask() {
+  const [gettask, setGetTask] = useState()
   const history = useHistory();
 
   const { id } = useParams();
@@ -30,6 +32,32 @@ function EditTask() {
     console.log("DATA AQUI:", data);
   };
 
+  useEffect(() => {
+    const fetchData = async (data) => {
+      try {
+        const { data: postsInfo } = await getTaskId(id, data);
+        const { task } = postsInfo;
+        const {title, description} = task
+        console.log("Console TASK", task);
+        setGetTask({title, description})
+        
+      } catch {
+        console.log("Deu erro macho.");
+      }
+    };
+
+    fetchData();
+  }, [id]);
+
+if(!gettask) return null
+
+  // const {tasks} = gettask
+  // const { title, description } = gettask
+
+  console.log("GET TASK AQUI", gettask)
+  // console.log("GET TASK AQUI", title)
+  // console.log("GET TASK AQUI", description)
+
   const goHome = () => {
     history.push("/gettasks");
   };
@@ -42,13 +70,13 @@ function EditTask() {
         <form className="login-form" onSubmit={handleSubmit(handleEdit)}>
           <TextField
             {...register("title")}
-            label="Título"
+            label={gettask.title}
             variant="outlined"
             type="text"
           />
           <TextField
             {...register("description")}
-            label="Descrição"
+            label={gettask.description}
             variant="outlined"
             type="text"
           />

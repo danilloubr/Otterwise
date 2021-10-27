@@ -18,3 +18,7 @@ export const editTask = (id, body) => {
   return client.put(`/${apiCode}/${id}`, body)
 };
 
+export const getTaskId = (id) => {
+  return client.get(`/${apiCode}/${id}`);
+};
+
