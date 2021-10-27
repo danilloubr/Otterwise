@@ -14,9 +14,7 @@ const Header = ({ title }) => {
           <li>
             <Link to="/gettasks">Listas de Tarefas</Link>
           </li>
-          <li>
-            <Link to="/posttasks">Adicionar Nova Tarefa</Link>
-          </li>
+          
         </ul>
       </nav>
 

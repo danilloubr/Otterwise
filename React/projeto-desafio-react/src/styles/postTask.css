@@ -1,0 +1,16 @@
+.botao-post {
+margin-top: 15px;
+}
+
+.div-secundaria {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+    
+}
+
+.div-secundaria h1 {
+    margin-bottom: 15px;
+}

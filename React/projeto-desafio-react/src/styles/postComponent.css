@@ -24,35 +24,14 @@
   
   padding: 20px;
   margin: 20px;
-  /* background: linear-gradient(225deg, #000000, #0e2bb8, #048f44);
-    background-size: 600% 600%;
-
-    -webkit-animation: AnimationName 14s ease infinite;
-    -moz-animation: AnimationName 14s ease infinite;
-    animation: AnimationName 14s ease infinite;
-}
-
-@-webkit-keyframes AnimationName {
-    0%{background-position:0% 78%}
-    50%{background-position:100% 23%}
-    100%{background-position:0% 78%}
-}
-@-moz-keyframes AnimationName {
-    0%{background-position:0% 78%}
-    50%{background-position:100% 23%}
-    100%{background-position:0% 78%}
-}
-@keyframes AnimationName {
-    0%{background-position:0% 78%}
-    50%{background-position:100% 23%}
-    100%{background-position:0% 78%}
-    */
+  
 } 
     
 
 
 .botao {
   text-align: center;
+  margin-bottom: 15px;
 }
 
 .card {

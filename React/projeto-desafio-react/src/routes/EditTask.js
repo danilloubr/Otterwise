@@ -3,7 +3,9 @@ import { editTask } from "../services/postServices";
 import { TextField, Button } from "@mui/material";
 import { useHistory, useParams} from "react-router";
 
-import "../styles/postComponent.css";
+import { toast } from "react-toastify";
+
+import "../styles/editTask.css";
 import { useForm } from "react-hook-form";
 // import { useEffect } from "react";
 
@@ -28,11 +30,11 @@ try {
      console.log(data)
      const {data: resp} = await editTask(id, data)
      console.log(resp)
-     alert("Post editado com sucesso!!!")
+     toast("Tarefa editada com sucesso!")
      history.push("/gettasks")
    } catch (error) {
      console.error(error)
-     alert("Post não editado !!!")
+     toast.error("EITA, algo deu errado. Preencha o Título e a Descrição!")
      
    }
    
@@ -76,10 +78,10 @@ try {
   }
 
   return (
-    <div>
+    <div className="div-principal">
       <h1 className="titulo-h1">Desafio Final de React - Editando Tarefa</h1>
-      <div className="div-principal">
-        <div className="div-conteiner-login">
+      <div className="div-secundaria">
+    
           <h1>Editar tarefa:</h1>
           <form className="login-form" onSubmit={handleSubmit(handleEdit)}>
             <TextField
@@ -99,16 +101,16 @@ try {
               
             />
 
-            <Button type="submit" variant="contained" color="success">
+            <Button className="botao-edit" type="submit" variant="contained" color="success">
               Editar
             </Button>
-            <Button type="submit" variant="contained" color="error" onClick={() => goHome()}>
+            <Button className="botao-edit" type="submit" variant="contained" color="error" onClick={() => goHome()}>
               Cancelar
             </Button>
           </form>
         </div>
       </div>
-    </div>
+    
   );
 }
 
