@@ -1,5 +1,5 @@
 
-import './App.css';
+
 import "./styles/Global.css"
 import Header from './components/Header';
 import Nav from './components/Nav';
