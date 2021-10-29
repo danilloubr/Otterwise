@@ -1,0 +1,33 @@
+.galeria {
+    display: flex;
+    width: 100%;
+    background-color: #e6bc7e;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  .pets {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 30px;
+    max-width: 1100px;
+  }
+  
+  .pets img {
+    width: 250px;
+    height: 250px;
+    margin: 20px;
+    padding: 10px;
+  }
+
+  .titulo-galeria {
+      display: flex;
+      color: #333333;
+      border: none;
+      padding-top: 30px;
+
+  }

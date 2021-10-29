@@ -1,0 +1,16 @@
+h6 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: #e6bc7e;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+  
+    text-align: center;
+  
+    color: #403423;
+  }
