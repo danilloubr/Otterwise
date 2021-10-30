@@ -1,19 +1,26 @@
+import Modal from "react-modal";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+import "./styles/Global.css";
 
-import "./styles/Global.css"
-import Header from './components/Header';
-import Nav from './components/Nav';
-import Main from './components/Main';
-import Footer from './components/Footer';
+import Home from "./routers/Home";
+import Login from "./routers/Login";
 
+Modal.setAppElement("#root");
 
 function App() {
   return (
     <div className="App">
-      <Nav/>
-      <Header/>
-      <Main/>
-      <Footer/>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+          <Home />
+          </Route>
+          <Route path="/login">
+          <Login />
+          </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }

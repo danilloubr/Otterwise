@@ -8,8 +8,13 @@
     "@testing-library/user-event": "^12.1.10",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-modal": "^3.14.3",
+    "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
-    "web-vitals": "^1.0.1"
+    "web-vitals": "^1.0.1",
+    "@mui/material": "latest",
+    "@emotion/styled": "latest",
+    "@emotion/react": "latest"
   },
   "scripts": {
     "start": "react-scripts start",

@@ -6,24 +6,24 @@ function Form() {
     <Fragment>
       <section className="formulario">
         <form method="post" className="caixa">
-          <label for="nome">Nome:</label>
-          <input
+          <label className="label-form" for="nome">Nome:</label>
+          <input className="input-form"
             type="text"
             name="nome"
             id="nome"
             placeholder="Insira seu nome"
             required
           />
-          <label for="email">Email:</label>
-          <input
+          <label className="label-form" for="email">Email:</label>
+          <input className="input-form"
             type="email"
             name="email"
             id="email"
             placeholder="Insira seu melhor email"
             required
           />
-          <label for="telefone">Telefone:</label>
-          <input
+          <label className="label-form" for="telefone">Telefone:</label>
+          <input className="input-form"
             type="number"
             name="telefone"
             id="telefone"
@@ -31,7 +31,7 @@ function Form() {
             maxlength="11"
             required
           />
-          <label for="mensagem">Mensagem:</label>
+          <label className="label-form" for="mensagem">Mensagem:</label>
           <textarea
             name="mensagem"
             className="mensagem"
@@ -40,7 +40,7 @@ function Form() {
             placeholder="Deixa aqui sua mesagem"
             required
           ></textarea>
-          <button type="submit">ENVIAR</button>
+          <button className="button-form" type="submit">ENVIAR</button>
 
           <div className="resultado"></div>
         </form>
