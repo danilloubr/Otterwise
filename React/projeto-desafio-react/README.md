@@ -1,4 +1,4 @@
-## Consideraçoes do Projeto
+## Considerações do Projeto
 
 Olá eu sou o Danilo Sousa [https://www.linkedin.com/in/danilloubr], e este é meu projeto de Todo List React 2021.
 
