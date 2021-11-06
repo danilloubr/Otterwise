@@ -1,0 +1,85 @@
+.modal-cadastro {
+    display: flex;
+    justify-content: center;
+    background: #e6bc7e;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 5px 2px rgb(0 0 0 / 25%);
+    border-radius: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    animation: slidedown 1s ease, go-back 1s infinite alternate;
+    padding: 20px;
+   
+   
+}
+
+
+.titulo-cadastro {
+
+    text-align: center;
+    
+    color: rgb(0, 0, 0);
+    border: none;
+    /* padding: 10px 0 10px 40px; */
+}
+
+.container4 {
+    display: flex;
+    justify-content: center;
+}
+.container4 button {
+    color:white;
+    background: #403423;
+    cursor: pointer;
+    width: 310px;
+    height: 35px;
+}
+
+.container4 button:hover {
+    background: #F59606;
+
+
+    color:black;
+   
+}
+
+@keyframes slidedown {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+  
+      transform: translateY(0px);
+    }
+  }
+  @keyframes go-back {
+    0% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+  }
+
+  @media (max-width: 768px) {
+
+    .container4 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container4 button {
+        color:white;
+        background: #403423;
+        cursor: pointer;
+        width: 200px;
+        height: 35px;
+    }
+  }
+  

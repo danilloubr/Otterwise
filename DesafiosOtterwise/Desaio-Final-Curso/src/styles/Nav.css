@@ -1,0 +1,100 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 90px;
+  left: 0px;
+  top: 0px;
+  background-color: #040404;
+}
+
+.navbar a {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  text-decoration: none;
+  padding: 5px;
+  cursor: pointer;
+
+  color: #ffd18d;
+}
+
+.menu-responsivo {
+  display: none;
+}
+
+.nav-mobile {
+  display: none;
+}
+
+@keyframes slidedown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+
+    transform: translateY(0px);
+  }
+}
+@keyframes go-back {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-mobile {
+    display: flex;
+  }
+
+  /* .logo {
+    padding-left: 100px;
+    padding-right: 200px;
+  } */
+
+  .menu-responsivo {
+    display: flex;
+    background-color: rgb(0, 0, 0);
+    color: #bf9d69;
+    width: 100%;
+    height: 400px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size : 36px
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 90px;
+    left: 0px;
+    top: 0px;
+    background-color: #040404;
+  }
+
+  .navbar #logo-marca {
+    width: 53px;
+    height: 53px;
+    margin-left: 30px;
+  }
+  .navbar a {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 0px;
+    line-height: 0x;
+    text-decoration: none;
+    padding: 0px;
+
+    color: #ffd18d;
+  }
+}

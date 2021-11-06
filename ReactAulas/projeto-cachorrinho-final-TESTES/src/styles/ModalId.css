@@ -1,0 +1,76 @@
+.modal-cadastro {
+    display: flex;
+    
+    justify-content: center;
+    
+    background: #e6bc7e;
+    
+    box-sizing: border-box;
+    box-shadow: 4px 4px 5px 2px rgb(0 0 0 / 25%);
+    border-radius: 10px;
+    margin: 50px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    animation: slidedown 2s ease, go-back 1s infinite alternate;
+    /* padding: 0px, */
+/* alien:center */
+    /* background-color: rgba(10,23,55,0.7); */
+    padding: 20px;
+    /* margin: 200px auto; */
+    /* background-color: transparent; */
+
+    /* align-items: flex-start; */
+    /* min-width: 694px; */
+   
+}
+
+
+.titulo-cadastro {
+    
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px 0 10px 40px;
+}
+
+.container4 {
+    display: flex;
+    justify-content: center;
+}
+.container4 button {
+    color:white;
+    background: #403423;
+    cursor: pointer;
+    width: 310px;
+    height: 35px;
+}
+
+.container4 button:hover {
+    background: #F59606;
+
+
+    color:black;
+   
+}
+
+@keyframes slidedown {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+  
+      transform: translateY(0px);
+    }
+  }
+  @keyframes go-back {
+    0% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+  }
+  

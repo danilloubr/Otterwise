@@ -1,0 +1,91 @@
+.formulario-login {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background: #727272;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+}
+
+.caixa-login {
+  display: flex;
+  
+  flex-direction: column;
+  width: 330px;
+  height: 427px;
+  background: #040404;
+  border-radius: 10px;
+  
+  border: 5px solid #403423;
+  box-sizing: border-box;
+  box-shadow: 4px 6px 10px 4px rgb(0 0 0 / 36%);
+ 
+  justify-content: space-evenly;
+}
+
+.formulario-login label {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height */
+
+  color: #ffd18d;
+}
+
+.formulario-login input {
+  width: 280px;
+  height: 30px;
+  background: #ffffff;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 10px;
+  /* text-align: center; */
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+button:hover {
+  color: white;
+  background-color: #403423;
+  cursor: pointer;
+}
+
+button {
+  width: 280px;
+  height: 35px;
+
+  margin-left: 20px;
+  margin-right: 10px;
+
+  background: #bf9d69;
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+
+  font-style: normal;
+  font-weight: bold;
+
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.logo-login {
+  display: inherit;
+  justify-content: center;
+}
+
+
+@media (min-width: 768) {
+
+  
+.formulario-login {
+
+width: 100px;
+
+}
+
+}
