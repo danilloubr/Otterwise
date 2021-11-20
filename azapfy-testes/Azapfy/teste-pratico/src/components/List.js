@@ -2,7 +2,7 @@
 import { Fragment, useEffect, useState } from "react";
 import { useHistory } from "react-router";
 import { useLocation } from "react-router-dom";
-import { Modal } from 'react-responsive-modal'
+import { Modal } from 'react-responsive-modal';
 import { animateScroll as scroll} from 'react-scroll'
 
 import axios from "axios";
@@ -40,18 +40,24 @@ function List() {
 
   const handleClickOpen = (id) => {
     const result = list.find((hero) => hero.id === id);
+
     setHeros([...heros, result]);
     setBtn([...btn, result.id]);
-    setTimeout(() => setBusca(""), 200)
+    setTimeout(() => setBusca(""), 200);
+    
   };
-
+  
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  }
+  
   const handleClose = () => {
     setHeros([]);
     setOpen(true);
     setBtn([]);
     setTimeout(() => scrollToTop(), 200);
     
-  };
+  }
 
   const goHero = (id) => {
     history.push(`/infos/${id}`);
@@ -61,7 +67,7 @@ function List() {
     const fetchData = async () => {
       try {
         const { data: resp } = await axios.get(
-          " https://cors-everywhere.herokuapp.com/http://homologacao3.azapfy.com.br/api/ps/metahumans"
+          "http://homologacao3.azapfy.com.br/api/ps/metahumans"
         ); 
         const queryObj = new URLSearchParams(location.search);
         const id = Number(queryObj.get("id"));
@@ -229,7 +235,9 @@ function List() {
               </div>
             )}
           </Modal>
-        )}      
+        )}   
+
+        
         <Footer/>
     </Fragment>
   );
