@@ -3,6 +3,7 @@ import { Fragment, useEffect, useState } from "react";
 import { useHistory } from "react-router";
 import { useLocation } from "react-router-dom";
 import { Modal } from 'react-responsive-modal'
+import { animateScroll as scroll} from 'react-scroll'
 
 import axios from "axios";
 
@@ -47,7 +48,8 @@ function List() {
   const handleClose = () => {
     setHeros([]);
     setOpen(true);
-    setBtn([])
+    setBtn([]);
+    setTimeout(() => scrollToTop(), 200);
     
   };
 
